@@ -106,8 +106,6 @@
     "lint": "tslint --project tsconfig.json -e 'node_modules/**'",
     "lint:fix": "npm run lint -- --fix",
     "ngc": "ngc -p tsconfig-aot.json",
-    "cleanup": "rimraf target/{aot,www}",
-    "clean-www": "rimraf target//www/app/{src,target/}",
     "start": "npm run webpack:dev",
     "serve": "npm run start",
     "build": "npm run webpack:prod",
@@ -122,8 +120,8 @@
     "webpack:test": "npm run test",
     "webpack-dev-server": "node --max_old_space_size=4096 node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "webpack": "node --max_old_space_size=4096 node_modules/webpack/bin/webpack.js",
-	"heroku-prebuild": "export NPM_CONFIG_PRODUCTION=false; export NODE_ENV=; NPM_CONFIG_PRODUCTION=false NODE_ENV=development npm install --only=dev --dev",
-    "heroku-postbuild": "export NPM_CONFIG_PRODUCTION=true; export NODE_ENV=production;"	
+    "heroku-prebuild": "export NPM_CONFIG_PRODUCTION=false; export NODE_ENV=; NPM_CONFIG_PRODUCTION=false NODE_ENV=development npm install --only=dev --dev",
+    "heroku-postbuild": "export NPM_CONFIG_PRODUCTION=true; export NODE_ENV=production;"
   },
   "jestSonar": {
     "reportPath": "target/test-results/jest",
