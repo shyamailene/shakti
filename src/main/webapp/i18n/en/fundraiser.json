@@ -1,0 +1,29 @@
+
+{
+    "shaktiApp": {
+        "fundraiser" : {
+            "home": {
+                "title": "Fundraisers",
+                "createLabel": "Create a new Fundraiser",
+                "createOrEditLabel": "Create or edit a Fundraiser"
+            },
+            "created": "A new Fundraiser is created with identifier {{ param }}",
+            "updated": "A Fundraiser is updated with identifier {{ param }}",
+            "deleted": "A Fundraiser is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Fundraiser {{ id }}?"
+            },
+            "detail": {
+                "title": "Fundraiser"
+            },
+            "name": "Name",
+            "email": "Email",
+            "email2": "Email 2",
+            "phone": "Phone",
+            "address": "Address",
+            "age": "Age",
+            "interested": "Interested",
+            "volunteer": "Volunteer"
+        }
+    }
+}

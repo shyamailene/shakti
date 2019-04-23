@@ -17,6 +17,18 @@ import { ShaktiAppRoutingModule } from './app-routing.module';
 import { ShaktiHomeModule } from './home/home.module';
 import { ShaktiAccountModule } from './account/account.module';
 import { ShaktiEntityModule } from './entities/entity.module';
+import { ShaktiNavbarComponent} from './shakti/navbar/navbar.component';
+import { ShaktiFooterComponent} from './shakti/footer/footer.component';
+import { HomeModule} from './shakti/home/home.module';
+import { LogoComponent } from './shakti/logo/logo.component';
+import { EventsComponent } from './shakti/events/events.component';
+import { PartnersComponent } from './shakti/partners/partners.component';
+import { SignupComponent} from './shakti/signup/signup.component';
+import { RangoliComponent} from './shakti/rangoli/rangoli.component';
+import { RangolisComponent} from './shakti/rangoli/rangolis.component';
+import { FundraiserComponent} from './shakti/fundraiser/fundraiser.component';
+import { FundraisersComponent} from './shakti/fundraiser/fundraisers.component';
+import { AlertComponent} from './shakti/_directives/alert.component';
 import * as moment from 'moment';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent, ActiveMenuDirective, ErrorComponent } from './layouts';
@@ -30,10 +42,11 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent
         ShaktiCoreModule,
         ShaktiHomeModule,
         ShaktiAccountModule,
-        ShaktiEntityModule
+        ShaktiEntityModule,
+        HomeModule
         // jhipster-needle-angular-add-module JHipster will add new module here
     ],
-    declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, ActiveMenuDirective, FooterComponent],
+    declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, ActiveMenuDirective, FooterComponent, ShaktiNavbarComponent, ShaktiFooterComponent, SignupComponent, AlertComponent, LogoComponent, EventsComponent, PartnersComponent, RangoliComponent, RangolisComponent, FundraiserComponent, FundraisersComponent],
     providers: [
         {
             provide: HTTP_INTERCEPTORS,

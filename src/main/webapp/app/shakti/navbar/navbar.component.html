@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-lg fixed-top" color-on-scroll="500">
+    <div class="container">
+        <div class="navbar-translate">
+            <a class="navbar-brand" [routerLink]="['/home']"><font color="#990033">Shakti-US</font></a>
+            <button class="navbar-toggler navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
+                <span class="navbar-toggler-bar"></span>
+                <span class="navbar-toggler-bar"></span>
+                <span class="navbar-toggler-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav ml-auto mainmenu">
+                <li class="nav-item">
+                    <a class="nav-link" rel="tooltip" title="Our Story" data-placement="bottom" >
+                        <p class="d-lg-none"><font color="#990033"></font></p>
+                    </a>
+                </li>
+			
+                <li class="nav-item" *ngIf="!isDocumentation()">
+                    <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/us.shakti/?ref=your_pages" target="_blank">
+                        <i class="fa fa-facebook-square"></i>
+                        <p class="d-lg-none">Facebook</p>
+                    </a>
+                </li>
+				<li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/ourstory']"><i class="nc-icon nc-book-bookmark"></i><font color="#990033">Our Story</font></a>
+                </li>				
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/executive']"><i class="nc-icon nc-layout-11"></i><font color="#990033">Executive Team</font></a>
+                </li>
+                <li class="nav-item">
+                    <a [routerLink]="['/logo']" class="nav-link"><i class="nc-icon nc-book-bookmark"></i><font color="#990033">About Logo</font></a>
+                </li>
+                <li class="nav-item">
+                    <a [routerLink]="['/events']" class="nav-link"><i class="nc-icon nc-book-bookmark"></i><font color="#990033">Events</font></a>
+                </li>
+                <li class="nav-item">
+                    <a [routerLink]="['/partners']" class="nav-link"><i class="nc-icon nc-book-bookmark"></i><font color="#990033">Partners</font></a>
+                </li>
+                <li class="nav-item mainmenu">
+                    <a [routerLink]="['/signup']" class="nav-link"><i class="nc-icon nc-book-bookmark"></i>
+						<font color="#990033">Registration</font>
+					</a>
+					<ul class="submenu">
+                        <li><a [routerLink]="['/rangoli']">Rangoli Registration</a></li> 
+                        <li><a [routerLink]="['/fundraiser']">Fundraiser Gala Registration</a></li> 
+					</ul>					
+                </li>
+				<li class="nav-item" style="margin-top:22px">
+					<form #form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="YVYZK5SRVMPE6">
+					<input (click)="form.submit()" type="image" src="../../content/images/btn_donate_LG.gif" border="0" name="submit" alt="PayPal!">
+					<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+					</form>							
+				</li>
+                <!-- <li class="nav-item" *ngIf="isHome()">
+                    <a href="https://www.creative-tim.com/product/paper-kit-2-pro?ref=pk2-free-local" target="_blank" class="btn btn-danger btn-round disabled">Upgrade to Pro</a>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+</nav>

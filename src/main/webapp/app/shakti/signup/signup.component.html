@@ -1,0 +1,179 @@
+		<div class="section text-center" style="background-color:#e0ebeb">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 mr-auto ml-auto">
+						<h2 class="text-center"><font color="#990033"><b>Registration</b></font></h2><br/><br/>
+							<div class="row">
+								<div class="col-md-6">
+									<label>First Name</label>
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="nc-icon nc-single-02"></i>
+										</span>
+										<input type="text" class="form-control" placeholder="First Name" [(ngModel)]=" register.firstName " name="contactName">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<label>Last Name</label>
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="nc-icon nc-single-02"></i>
+										</span>
+										<input type="text" class="form-control" placeholder="Last Name" [(ngModel)]=" register.lastName " name="contactName">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<label>Email</label>
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="nc-icon nc-email-85"></i>
+										</span>
+										<input type="text" class="form-control" placeholder="Email" [(ngModel)]=" register.email " name="contactEmail">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<label>Phone Number</label>
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="nc-icon nc-mobile"></i>
+										</span>
+										<input type="text" class="form-control" placeholder="Phone Number" [(ngModel)]=" register.phone " name="contactEmail">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<label>School</label>
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="nc-icon nc-school-85"></i>
+										</span>
+										<input type="text" class="form-control" placeholder="School" [(ngModel)]=" register.school " name="contactSchool">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<label>Grade</label>
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="nc-icon nc-grade"></i>
+										</span>
+										<input type="text" class="form-control" placeholder="Grade" [(ngModel)]=" register.grade " name="contactGrade">
+									</div>
+								</div>
+							</div>
+							<br/>
+							<label><h4><b>Address</b></h4></label>
+							<br/>
+							<div class="row">
+								<div class="col-md-6">
+									<label>Line 1(#)</label>
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="nc-icon nc-paper"></i>
+										</span>
+										<input type="text" class="form-control" placeholder="Line 1" [(ngModel)]=" register.line1 " name="contactName">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<label>Line 2(Street Address)</label>
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="nc-icon nc-paper"></i>
+										</span>
+										<input type="text" class="form-control" placeholder="Line 2" [(ngModel)]=" register.line2 " name="contactName">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<label>City</label>
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="nc-icon nc-paper"></i>
+										</span>
+										<input type="text" class="form-control" placeholder="City" [(ngModel)]=" register.city " name="contactEmail">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<label>State</label>
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="nc-icon nc-paper"></i>
+										</span>
+										<input type="text" class="form-control" placeholder="State" [(ngModel)]=" register.state " name="contactEmail">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<label>Country</label>
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="nc-icon nc-paper"></i>
+										</span>
+										<input type="text" class="form-control" placeholder="Country" [(ngModel)]=" register.country " name="contactEmail">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<label>Zipcode</label>
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="nc-icon nc-paper"></i>
+										</span>
+										<input type="text" class="form-control" placeholder="Zipcode" [(ngModel)]=" register.zipcode " name="contactEmail">
+									</div>
+								</div>
+							</div>
+							<br/><br/>
+			                <div class="form-check">
+							  <label class="form-check-label">
+								<input class="form-check-input" type="checkbox" [(ngModel)]=" register.younger ">
+									Are you a student of age 16 or younger ?
+								<span class="form-check-sign"></span>
+							  </label>
+							</div>
+							<br/><br/>
+							<div class="row" *ngIf="register.younger">
+								<div class="col-md-6">
+									<label>Parent First Name</label>
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="nc-icon nc-single-02"></i>
+										</span>
+										<input type="text" class="form-control" placeholder="Parent First Name" [(ngModel)]=" register.parentFName " name="contactName">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<label>Parent Last Name</label>
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="nc-icon nc-single-02"></i>
+										</span>
+										<input type="text" class="form-control" placeholder="Parent Last Name" [(ngModel)]=" register.parentLName " name="contactName">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<label>Parent Email</label>
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="nc-icon nc-email-85"></i>
+										</span>
+										<input type="text" class="form-control" placeholder="Parent Email" [(ngModel)]=" register.parentEmail " name="contactEmail">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<label>Parent Phone Number</label>
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="nc-icon nc-mobile"></i>
+										</span>
+										<input type="text" class="form-control" placeholder="Parent Phone Number" [(ngModel)]=" register.parentPhone " name="contactEmail">
+									</div>
+								</div>
+							</div>
+							<br/>
+							<br/>
+							<alert></alert>
+							<h2 *ngIf="paypalLoad">Paypal button is loading</h2>
+							<div id="paypal-checkout-btn"> Please pay the amount($20) for Registration.</div>
+					</div>
+				</div>
+			</div>
+		</div>		
+ 
+ 
+ 

@@ -1,7 +1,8 @@
 /* after changing this file run 'npm run webpack:build' */
 /* tslint:disable */
 import '../content/scss/vendor.scss';
-
+import '../content/css/demo.scss';
+import '../content/css/nucleo-icons.scss';
 // Imports all fontawesome core and solid icons
 
 import { library } from '@fortawesome/fontawesome-svg-core';

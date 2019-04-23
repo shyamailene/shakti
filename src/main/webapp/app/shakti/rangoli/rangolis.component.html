@@ -1,0 +1,43 @@
+<div class="section text-center" style="background-color:#e0ebeb">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 mr-auto ml-auto">
+				<h2 class="text-center"><font color="#990033"><b>Shakti Fundraiser Gala Registration</b></font></h2><br/>
+				<b>Date: April'27th  ; Time : 5 PM- 8 PM ; Address: 8400 Durga Pl, Fairfax Station, VA 22039 ; Contact:us.shakti@gmail.com</b><br/><br/>
+					<div class="row form-group">
+						<div class="col-md-12">
+							<table class="jh-table table table-striped">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Phonenumber</th>
+											<th>Email</th>
+											<th>Email2</th>
+											<th>Address</th>
+											<th>Age</th>
+											<th>Interested</th>
+											<th>Volunteer</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr *ngFor="let fund of rangolisList">
+											<td>{{fund.name}}</td>
+											<td>{{fund.phonenumber}}</td>
+											<td>{{fund.email}}</td>
+											<td>{{fund.email_2}}</td>
+											<td>{{fund.address}}</td>
+											<td>{{fund.age}}</td>
+											<td>{{fund.interested}}</td>
+											<td>{{fund.volunteer}}</td>
+										</tr>
+									</tbody>
+								</table>
+						</div>
+					</div>
+					<alert></alert>
+				</div>
+		</div>
+	</div>
+</div>		
+
+

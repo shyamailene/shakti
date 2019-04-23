@@ -1,0 +1,89 @@
+	<div class="section text-center" style="background-color:#e0ebeb">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 class="text-center"><font color="#990033"><b>Partners</b></font></h1> 
+				</div>
+			</div>
+			<div class="row">
+			
+				<div class="col-md-6" *ngFor="let partner of partners">
+					<table class="contact-table table table-curved table-striped">
+						<tr>
+							<td align="left" width="50%">Event Name</td>
+							<td align="left" width="50%">{{partner.name}}</td>
+						</tr>
+						<tr>
+							<td align="left">Event Type</td>
+							<td align="left">{{partner.type}}</td>
+						</tr>
+						<tr>
+							<td align="left">Event Description</td>
+							<td align="left">{{partner.description}}</td>
+						</tr>
+						<tr>
+							<td align="left">Event Location</td>
+							<td align="left">{{partner.location}}</td>
+						</tr>
+						<tr>
+							<td align="left">Event Date</td>
+							<td align="left">{{partner.date | date:'mediumDate'}}</td>
+						</tr>
+					</table>
+				</div>
+						
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="card card-profile card-plain">
+						<div class="card-partner">
+							<a href="https://theimaginationprojectweb.wordpress.com" target="_blank"><img src="../../../content/images/theimagination_min.png" alt="..."></a>
+						</div>
+						<div class="card-block">
+							<a href="#paper-kit">
+								<div class="author">
+									<h4 class="card-title"> The Imagination Project </h4>
+									<h6 class="card-category"></h6>
+								</div>
+							</a>
+							<p class="card-description text-justify" style="text-indent:50px">
+							</p>
+						</div>
+						<div class="card-footer text-center">
+							<a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-twitter"></i></a>
+							<a href="https://www.facebook.com/theimaginationprojectpitt/" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-facebook-square"></i></a>
+							<a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-instagram"></i></a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="card card-profile card-plain">
+						<div class="card-partner">
+							<a href="https://smile.amazon.com/" target="_blank"><img src="../../../content/images/smileblue_min.jpg" alt="..."></a>
+						</div>
+						<div class="card-block">
+							<a href="#paper-kit">
+								<div class="author">
+									<h4 class="card-title">Bring A Smile </h4>
+									<h6 class="card-category"></h6>
+								</div>
+							</a>
+							<p class="card-description text-justify" style="text-indent:50px">
+							</p>
+						</div>
+						<div class="card-footer text-center">
+							<a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-twitter"></i></a>
+							<a href="https://www.facebook.com/bringasmilehyderabad/" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-facebook-square"></i></a>
+							<a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-instagram"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="text-center" id="team">
+		<div class="container">
+		</div>
+	</div>

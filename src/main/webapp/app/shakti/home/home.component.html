@@ -1,0 +1,129 @@
+<div class="page-header" data-parallax="true" style="background-image: url('../../../content/images/gvemuri.jpeg');">
+    <div class="container">
+        <div class="motto text-center">
+        </div>
+		<h6 class=" category-absolute ml-auto mr-auto"><a href="mailto:us.shakti@gmail.com"><font color="#000066">us.shakti@gmail.com</font></a> 
+        <!-- <h6 class="category category-absolute">Designed and coded by -->
+
+        </h6>		
+    </div>
+</div>
+
+
+<div class="wrapper" style="background-color:#ffaa80">
+    <div class="container">
+        <div class="motto text-center">
+
+			<ngb-carousel>
+					
+					<ng-template ngbSlide>
+						<img src="../../../content/images/quotes-background.jpg" style="-webkit-filter: blur(5px);filter: blur(5px);" alt="Random first slide">
+						<div class="carousel-caption center" style="bottom:30%">
+							<h2><font color="#000066">"We should always have some aim in life which we must try to achieve while being of help to others."</font></h2>
+							<h3><font color="#006600">―Sudha Murthy, Grandma's Bag of Stories</font></h3>
+						</div>
+					</ng-template>
+					<ng-template ngbSlide>
+						<img src="../../../content/images/quotes-background.jpg" style="-webkit-filter: blur(5px);filter: blur(5px);" alt="Random second slide">
+						<div class="carousel-caption" style="bottom:30%">
+							<h2><font color="#000066">"I raise up my voice—not so I can shout, but so that those without a voice can be heard...we cannot succeed when half of us are held back."</font> </h2>
+							<h3><font color="#006600">―Malala Yousafzai</font></h3>
+						</div>
+					</ng-template>
+					<ng-template ngbSlide>
+						<img src="../../../content/images/quotes-background.jpg" style="-webkit-filter: blur(5px);filter: blur(5px);" alt="Random third slide">
+						<div class="carousel-caption" style="bottom:30%">
+							<h2>  <font color="#000066"> "There is no limit to what we, as women, can accomplish." </font></h2>
+							<h3> <font color="#006600">—Michelle Obama</font></h3>
+						</div>
+					</ng-template>
+					<ng-template ngbSlide>
+						<img src="../../../content/images/quotes-background.jpg" style="-webkit-filter: blur(5px);filter: blur(5px);" alt="Random first slide">
+						<div class="carousel-caption center" style="bottom:30%">
+							<h2><font color="#000066">"Men can do certain things well and women other things. Men and women are complementary to each other. One need not prove one’s strength."</font> </h2>
+							<h3><font color="#006600">―Michelle Obama</font></h3>
+						</div>
+					</ng-template>
+					<ng-template ngbSlide>
+						<img src="../../../content/images/quotes-background.jpg" style="-webkit-filter: blur(5px);filter: blur(5px);" alt="Random second slide">
+						<div class="carousel-caption" style="bottom:30%">
+							<h2><font color="#000066">"Women are the real architects of society."</font> </h2>
+							<h3><font color="#006600">―Harriet Beecher Stowe</font></h3>
+						</div>
+					</ng-template>
+					<ng-template ngbSlide>
+						<img src="../../../content/images/quotes-background.jpg" style="-webkit-filter: blur(5px);filter: blur(5px);" alt="Random third slide">
+						<div class="carousel-caption" style="bottom:30%">
+							<h2> <font color="#000066">  "Human rights are women's rights and women's rights are human rights, once and for all." </font></h2>
+							<h3> <font color="#006600">—Hillary Clinton</font></h3>
+						</div>
+					</ng-template>
+					<ng-template ngbSlide>
+						<img src="../../../content/images/quotes-background.jpg" style="-webkit-filter: blur(5px);filter: blur(5px);" alt="Random first slide">
+						<div class="carousel-caption center" style="bottom:30%">
+							<h2><font color="#000066">"We need to reshape our own perception of how we view ourselves. We have to step up as women and take the lead."</font></h2>
+							<h3><font color="#006600">―Beyoncé</font></h3>
+						</div>
+					</ng-template>
+					<ng-template ngbSlide>
+						<img src="../../../content/images/quotes-background.jpg" style="-webkit-filter: blur(5px);filter: blur(5px);" alt="Random second slide">
+						<div class="carousel-caption" style="bottom:30%">
+							<h2><font color="#000066">"A woman is the full circle. Within her is the power to create, nurture and transform."</font> </h2>
+							<h3><font color="#006600">―DIANE MARIECHILD</font></h3>
+						</div>
+					</ng-template>
+					
+			</ngb-carousel>
+		
+        
+        </div>
+    </div>
+	
+	<div class="main" id="ourstory">
+		<app-ourstory></app-ourstory>
+		<app-executive></app-executive>
+		<div class="section text-center" style="background-color:#e0ebeb">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 mr-auto ml-auto">
+						<font color="#990033">
+						<h2 class="text-center">Keep in touch?</h2>
+						<form class="contact-form">
+							<div class="row">
+								<div class="col-md-6">
+									<label>Name</label>
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="nc-icon nc-single-02"></i>
+										</span>
+										<input type="text" class="form-control" placeholder="Name" [(ngModel)]=" contactus.name " name="contactName">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<label>Email</label>
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="nc-icon nc-email-85"></i>
+										</span>
+										<input type="text" class="form-control" placeholder="Email" [(ngModel)]=" contactus.email " name="contactEmail">
+									</div>
+								</div>
+							</div>
+							<label>Message</label>
+							<textarea class="form-control" rows="4" placeholder="" [(ngModel)]=" contactus.content " name="contactContent"></textarea>
+							<div class="row">
+								<div class="col-md-4 mr-auto ml-auto">
+									<button class="btn btn-danger btn-lg btn-fill" (click)="insert()">Send Message</button>
+								</div>
+								<div>
+									{{result}}
+								</div>
+							</div>
+						</form>
+						</font>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,55 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="fundraiser">
+            <h2><span jhiTranslate="shaktiApp.fundraiser.detail.title">Fundraiser</span> {{fundraiser.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="shaktiApp.fundraiser.name">Name</span></dt>
+                <dd>
+                    <span>{{fundraiser.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="shaktiApp.fundraiser.email">Email</span></dt>
+                <dd>
+                    <span>{{fundraiser.email}}</span>
+                </dd>
+                <dt><span jhiTranslate="shaktiApp.fundraiser.email2">Email 2</span></dt>
+                <dd>
+                    <span>{{fundraiser.email2}}</span>
+                </dd>
+                <dt><span jhiTranslate="shaktiApp.fundraiser.phone">Phone</span></dt>
+                <dd>
+                    <span>{{fundraiser.phone}}</span>
+                </dd>
+                <dt><span jhiTranslate="shaktiApp.fundraiser.address">Address</span></dt>
+                <dd>
+                    <span>{{fundraiser.address}}</span>
+                </dd>
+                <dt><span jhiTranslate="shaktiApp.fundraiser.age">Age</span></dt>
+                <dd>
+                    <span>{{fundraiser.age}}</span>
+                </dd>
+                <dt><span jhiTranslate="shaktiApp.fundraiser.interested">Interested</span></dt>
+                <dd>
+                    <span>{{fundraiser.interested}}</span>
+                </dd>
+                <dt><span jhiTranslate="shaktiApp.fundraiser.volunteer">Volunteer</span></dt>
+                <dd>
+                    <span>{{fundraiser.volunteer}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/fundraiser', fundraiser.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

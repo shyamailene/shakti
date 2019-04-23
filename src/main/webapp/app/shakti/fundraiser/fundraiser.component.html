@@ -1,0 +1,92 @@
+		<div class="section text-center" style="background-color:#e0ebeb">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 mr-auto ml-auto">
+						<h2 class="text-center"><font color="#990033"><b>Shakti Fundraiser Gala Registration</b></font></h2><br/>
+						<b>Date: April'27th  ; Time : 5 PM- 8 PM ; Address: 8400 Durga Pl, Fairfax Station, VA 22039 ; Contact:us.shakti@gmail.com</b><br/><br/>
+							<div class="row form-group">
+								<div class="col-md-12">
+									<label style="font-size:20px; float: left;">Email address <font color="#990033">*</font></label>
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="nc-icon nc-email-85"></i>
+										</span>
+										<input type="text" class="form-control" placeholder="Your email" [(ngModel)]=" fundraiser.email " name="contactEmail" #contactEmail="ngModel" required>
+										<div [hidden]="contactEmail.valid || contactEmail.pristine"
+													class="alert alert-danger">
+											Email is required
+										</div>										
+									</div>
+								</div>
+								<div class="col-md-12">
+									<label style="font-size:20px; float: left;">Name <font color="#990033">*</font></label>
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="nc-icon nc-single-02"></i>
+										</span>
+										<input type="text" class="form-control" placeholder="Your Name" [(ngModel)]=" fundraiser.name " name="contactName" #contactName="ngModel" required>
+										<div [hidden]="contactName.valid || contactName.pristine"
+													class="alert alert-danger">
+											Name is required
+										</div>
+			 
+									</div>
+								</div>
+								<div class="col-md-12">
+									<label style="font-size:20px; float: left;">Email #2 <font color="#990033">*</font></label>
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="nc-icon nc-email-85"></i>
+										</span>
+										<input type="text" class="form-control" placeholder="Email" [(ngModel)]=" fundraiser.email2 " name="contactEmail">
+									</div>
+								</div>
+								<div class="col-md-12">
+									<label style="font-size:20px; float: left;">Address</label>
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="nc-icon nc-paper"></i>
+										</span>
+										<input type="text" class="form-control" placeholder="Your address" [(ngModel)]=" fundraiser.address " name="contactEmail">
+									</div>
+								</div>
+								<div class="col-md-12">
+									<label style="font-size:20px; float: left;">Phone Number <font color="#990033">*</font></label>
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="nc-icon nc-mobile"></i>
+										</span>
+										<input type="text" class="form-control" placeholder="Phone Number" [(ngModel)]=" fundraiser.phone " name="contactEmail">
+									</div>
+								</div>
+								<div class="col-md-12">
+									<label style="font-size:20px; float: left;">Interested in Volunteering? <font color="#990033">*</font></label>
+								</div>
+								<div class="col-md-12">
+									<fieldset>
+									  <div class="some-class">
+										<input type="radio" class="radio" [(ngModel)]=" fundraiser.volunteer " name="volunteer" value="Yes" id="Yes"/>
+										<label for="Yes" class="radiolabel">Yes</label><br/>
+										<input type="radio" class="radio" [(ngModel)]=" fundraiser.volunteer " name="volunteer" value="No" id="No"/>
+										<label for="No" class="radiolabel">No</label><br/>
+									  </div>
+									</fieldset>								
+								</div>
+								<div class="col-md-12">
+										<input type="radio" class="radio" [(ngModel)]=" fundraiser.volunteer " name="volunteer" value="Maybe" id="Maybe"/>
+										<label for="May" class="radiolabel">Maybe</label><br/>
+								</div>
+							</div>
+							<alert></alert>
+							<div class="row">
+								<div class="col-md-4 mr-auto ml-auto">
+									<button class="btn btn-danger btn-lg btn-fill" (click)="insert()">Register</button>
+								</div>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>		
+ 
+ 
+ 

@@ -1,0 +1,56 @@
+	<div class="section text-center" style="background-color:#e0ebeb">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 class="text-center"><font color="#990033"><b>Events</b></font></h1> 
+				</div>
+			</div>
+			<div class="row">
+			
+				<div class="col-md-6" *ngFor="let event of events">
+					<table class="contact-table table table-curved table-striped">
+						<tr>
+							<td align="left" width="50%">Event Name</td>
+							<td align="left" width="50%">{{event.name}}</td>
+						</tr>
+						<tr>
+							<td align="left">Event Type</td>
+							<td align="left">{{event.type}}</td>
+						</tr>
+						<tr>
+							<td align="left">Event Description</td>
+							<td align="left">{{event.description}}</td>
+						</tr>
+						<tr>
+							<td align="left">Event Location</td>
+							<td align="left">{{event.location}}</td>
+						</tr>
+						<tr>
+							<td align="left">Event Date</td>
+							<td align="left">{{event.date | date:'mediumDate'}}</td>
+						</tr>
+					</table>
+				</div>
+						
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card card-profile card-plain">
+						<div>
+							<a href="#card-events" target="_blank"><img src="../../../content/images/Event0002.jpg" alt="..."></a>
+						</div>
+						<div class="card-block">
+							<a href="#paper-kit">
+								<div class="author">
+									<h4 class="card-title">  </h4>
+									<h6 class="card-category"></h6>
+								</div>
+							</a>
+							<p class="card-description text-justify" style="text-indent:50px">
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
