@@ -192,6 +192,7 @@ web: java $JAVA_OPTS  -jar target/*.war --spring.profiles.active=prod,heroku,no-
 
 DNS:
 corrugated-tyrannosaurs-c1spbtiwxn11owfy2hnyq5d9.herokudns.com
+corrugated-tyrannosaurs-c1spbtiwxn11owfy2hnyq5d9.herokudns.com.
 
 Test Credit card details
 shyamailene/angular5
@@ -206,3 +207,14 @@ CVV: 458
 
 command for ui build: yarn build 
 command for ui start: yarn start
+
+Host 
+ec2-107-20-176-27.compute-1.amazonaws.com
+Database 
+d5dfbruhcu4svn
+User 
+mhalvpvgwkejdc
+Port 
+5432
+Password 
+13a5f273a680bd460b59ebbe59e37b3922ca069329d3cda80f5d5c572f83dd8d 
