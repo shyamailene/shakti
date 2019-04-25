@@ -1,0 +1,78 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "firstName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lastName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "line1",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "line2",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "city",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "state",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "country",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "zipcode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "parentFName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "parentLName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "parentEmail",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "parentPhone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "school",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "grade",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20190424143651",
+    "dto": "no",
+    "searchEngine": false,
+    "service": "no",
+    "entityTableName": "signup",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

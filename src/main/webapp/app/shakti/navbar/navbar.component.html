@@ -16,35 +16,63 @@
                     </a>
                 </li>
 			
-                <li class="nav-item" *ngIf="!isDocumentation()">
-                    <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/us.shakti/?ref=your_pages" target="_blank">
-                        <i class="fa fa-facebook-square"></i>
-                        <p class="d-lg-none">Facebook</p>
-                    </a>
-                </li>
 				<li class="nav-item">
-                    <a class="nav-link" [routerLink]="['/ourstory']"><i class="nc-icon nc-book-bookmark"></i><font color="#990033">Our Story</font></a>
+                    <a class="nav-link" [routerLink]="['/ourstory']">
+                        <span>
+                            <fa-icon [icon]="'book'"></fa-icon>
+                            <span><font color="#990033">Our Story</font></span>
+                        </span>
+                    </a>
                 </li>				
                 <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['/executive']"><i class="nc-icon nc-layout-11"></i><font color="#990033">Executive Team</font></a>
+                    <a class="nav-link" [routerLink]="['/executive']">
+                        <span>
+                            <fa-icon [icon]="'user-plus'"></fa-icon>
+                            <span><font color="#990033">Executive Team</font></span>
+                        </span>
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a [routerLink]="['/logo']" class="nav-link"><i class="nc-icon nc-book-bookmark"></i><font color="#990033">About Logo</font></a>
+                    <a [routerLink]="['/logo']" class="nav-link">
+                        <span>
+                            <fa-icon [icon]="'book'"></fa-icon>
+                            <span><font color="#990033">About Logo</font></span>
+                        </span>
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a [routerLink]="['/events']" class="nav-link"><i class="nc-icon nc-book-bookmark"></i><font color="#990033">Events</font></a>
+                    <a [routerLink]="['/events']" class="nav-link">
+                        <span>
+                            <fa-icon [icon]="'list'"></fa-icon>
+                            <span><font color="#990033">Events</font></span>
+                        </span>                        
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a [routerLink]="['/partners']" class="nav-link"><i class="nc-icon nc-book-bookmark"></i><font color="#990033">Partners</font></a>
+                    <a [routerLink]="['/partners']" class="nav-link">
+                        <span>
+                            <fa-icon [icon]="'user-plus'"></fa-icon>
+                            <span><font color="#990033">Partners</font></span>
+                        </span>                        
+                    </a>
                 </li>
                 <li class="nav-item mainmenu">
-                    <a [routerLink]="['/signup']" class="nav-link"><i class="nc-icon nc-book-bookmark"></i>
-						<font color="#990033">Registration</font>
+                    <a [routerLink]="['/signup']" class="nav-link">
+                        <span>
+                            <fa-icon [icon]="'user'"></fa-icon>
+                            <span><font color="#990033">Registration</font></span>
+                        </span>                       						
 					</a>
 					<ul class="submenu">
                         <li><a [routerLink]="['/rangoli']">Rangoli Registration</a></li> 
                         <li><a [routerLink]="['/fundraiser']">Fundraiser Gala Registration</a></li> 
 					</ul>					
+                </li>
+                <li class="nav-item" *ngIf="!isDocumentation()">
+                    <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/us.shakti/?ref=your_pages" target="_blank">
+                        <i class="fa fa-facebook-square"></i>
+                        <p class="d-lg-none">Facebook</p>
+                    </a>
                 </li>
 				<li class="nav-item" style="margin-top:22px">
 					<form #form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">

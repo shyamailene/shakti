@@ -1,0 +1,84 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="shaktiApp.signup.home.title">Signups</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-signup" [routerLink]="['/signup/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="shaktiApp.signup.home.createLabel">
+            Create new Signup
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="signups">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="shaktiApp.signup.firstName">First Name</span></th>
+            <th><span jhiTranslate="shaktiApp.signup.lastName">Last Name</span></th>
+            <th><span jhiTranslate="shaktiApp.signup.email">Email</span></th>
+            <th><span jhiTranslate="shaktiApp.signup.phone">Phone</span></th>
+            <th><span jhiTranslate="shaktiApp.signup.line1">Line 1</span></th>
+            <th><span jhiTranslate="shaktiApp.signup.line2">Line 2</span></th>
+            <th><span jhiTranslate="shaktiApp.signup.city">City</span></th>
+            <th><span jhiTranslate="shaktiApp.signup.state">State</span></th>
+            <th><span jhiTranslate="shaktiApp.signup.country">Country</span></th>
+            <th><span jhiTranslate="shaktiApp.signup.zipcode">Zipcode</span></th>
+            <th><span jhiTranslate="shaktiApp.signup.parentFName">Parent F Name</span></th>
+            <th><span jhiTranslate="shaktiApp.signup.parentLName">Parent L Name</span></th>
+            <th><span jhiTranslate="shaktiApp.signup.parentEmail">Parent Email</span></th>
+            <th><span jhiTranslate="shaktiApp.signup.parentPhone">Parent Phone</span></th>
+            <th><span jhiTranslate="shaktiApp.signup.school">School</span></th>
+            <th><span jhiTranslate="shaktiApp.signup.grade">Grade</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let signup of signups ;trackBy: trackId">
+                <td><a [routerLink]="['/signup', signup.id, 'view' ]">{{signup.id}}</a></td>
+                <td>{{signup.firstName}}</td>
+                <td>{{signup.lastName}}</td>
+                <td>{{signup.email}}</td>
+                <td>{{signup.phone}}</td>
+                <td>{{signup.line1}}</td>
+                <td>{{signup.line2}}</td>
+                <td>{{signup.city}}</td>
+                <td>{{signup.state}}</td>
+                <td>{{signup.country}}</td>
+                <td>{{signup.zipcode}}</td>
+                <td>{{signup.parentFName}}</td>
+                <td>{{signup.parentLName}}</td>
+                <td>{{signup.parentEmail}}</td>
+                <td>{{signup.parentPhone}}</td>
+                <td>{{signup.school}}</td>
+                <td>{{signup.grade}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/signup', signup.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/signup', signup.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'signup/'+ signup.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

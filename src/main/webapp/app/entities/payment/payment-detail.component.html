@@ -1,0 +1,43 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="payment">
+            <h2><span jhiTranslate="shaktiApp.payment.detail.title">Payment</span> {{payment.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="shaktiApp.payment.paymentToken">Payment Token</span></dt>
+                <dd>
+                    <span>{{payment.paymentToken}}</span>
+                </dd>
+                <dt><span jhiTranslate="shaktiApp.payment.orderID">Order ID</span></dt>
+                <dd>
+                    <span>{{payment.orderID}}</span>
+                </dd>
+                <dt><span jhiTranslate="shaktiApp.payment.payerID">Payer ID</span></dt>
+                <dd>
+                    <span>{{payment.payerID}}</span>
+                </dd>
+                <dt><span jhiTranslate="shaktiApp.payment.paymentID">Payment ID</span></dt>
+                <dd>
+                    <span>{{payment.paymentID}}</span>
+                </dd>
+                <dt><span jhiTranslate="shaktiApp.payment.relId">Rel Id</span></dt>
+                <dd>
+                    <span>{{payment.relId}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/payment', payment.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

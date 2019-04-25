@@ -8,6 +8,10 @@
             "entities": {
                 "main": "Entities",
                 "fundraiser": "Fundraiser",
+                "rangoli": "Rangoli",
+                "payment": "Payment",
+                "signup": "Signup",
+                "contactus": "Contactus",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

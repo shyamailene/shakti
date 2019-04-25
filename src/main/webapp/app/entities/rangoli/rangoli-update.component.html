@@ -1,0 +1,74 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-rangoli-heading" jhiTranslate="shaktiApp.rangoli.home.createOrEditLabel">Create or edit a Rangoli</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!rangoli.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="rangoli.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="shaktiApp.rangoli.email" for="field_email">Email</label>
+                    <input type="text" class="form-control" name="email" id="field_email"
+                        [(ngModel)]="rangoli.email" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="shaktiApp.rangoli.name" for="field_name">Name</label>
+                    <input type="text" class="form-control" name="name" id="field_name"
+                        [(ngModel)]="rangoli.name" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="shaktiApp.rangoli.age" for="field_age">Age</label>
+                    <input type="number" class="form-control" name="age" id="field_age"
+                        [(ngModel)]="rangoli.age" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="shaktiApp.rangoli.email2" for="field_email2">Email 2</label>
+                    <input type="text" class="form-control" name="email2" id="field_email2"
+                        [(ngModel)]="rangoli.email2" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="shaktiApp.rangoli.address" for="field_address">Address</label>
+                    <input type="text" class="form-control" name="address" id="field_address"
+                        [(ngModel)]="rangoli.address" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="shaktiApp.rangoli.phone" for="field_phone">Phone</label>
+                    <input type="text" class="form-control" name="phone" id="field_phone"
+                        [(ngModel)]="rangoli.phone" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="shaktiApp.rangoli.interested" for="field_interested">Interested</label>
+                    <input type="checkbox" class="form-control" name="interested" id="field_interested"
+                        [(ngModel)]="rangoli.interested" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="shaktiApp.rangoli.volunteer" for="field_volunteer">Volunteer</label>
+                    <input type="text" class="form-control" name="volunteer" id="field_volunteer"
+                        [(ngModel)]="rangoli.volunteer" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="shaktiApp.rangoli.subdate" for="field_subdate">Subdate</label>
+                    <div class="input-group">
+                        <input id="field_subdate" type="text" class="form-control" name="subdate" ngbDatepicker  #subdateDp="ngbDatepicker" [(ngModel)]="rangoli.subdate"
+                        />
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="subdateDp.toggle()"><fa-icon [icon]="'calendar-alt'"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

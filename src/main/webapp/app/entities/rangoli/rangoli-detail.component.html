@@ -1,0 +1,59 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="rangoli">
+            <h2><span jhiTranslate="shaktiApp.rangoli.detail.title">Rangoli</span> {{rangoli.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="shaktiApp.rangoli.email">Email</span></dt>
+                <dd>
+                    <span>{{rangoli.email}}</span>
+                </dd>
+                <dt><span jhiTranslate="shaktiApp.rangoli.name">Name</span></dt>
+                <dd>
+                    <span>{{rangoli.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="shaktiApp.rangoli.age">Age</span></dt>
+                <dd>
+                    <span>{{rangoli.age}}</span>
+                </dd>
+                <dt><span jhiTranslate="shaktiApp.rangoli.email2">Email 2</span></dt>
+                <dd>
+                    <span>{{rangoli.email2}}</span>
+                </dd>
+                <dt><span jhiTranslate="shaktiApp.rangoli.address">Address</span></dt>
+                <dd>
+                    <span>{{rangoli.address}}</span>
+                </dd>
+                <dt><span jhiTranslate="shaktiApp.rangoli.phone">Phone</span></dt>
+                <dd>
+                    <span>{{rangoli.phone}}</span>
+                </dd>
+                <dt><span jhiTranslate="shaktiApp.rangoli.interested">Interested</span></dt>
+                <dd>
+                    <span>{{rangoli.interested}}</span>
+                </dd>
+                <dt><span jhiTranslate="shaktiApp.rangoli.volunteer">Volunteer</span></dt>
+                <dd>
+                    <span>{{rangoli.volunteer}}</span>
+                </dd>
+                <dt><span jhiTranslate="shaktiApp.rangoli.subdate">Subdate</span></dt>
+                <dd>
+                    <span>{{rangoli.subdate}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/rangoli', rangoli.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

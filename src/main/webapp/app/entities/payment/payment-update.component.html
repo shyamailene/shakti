@@ -1,0 +1,49 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-payment-heading" jhiTranslate="shaktiApp.payment.home.createOrEditLabel">Create or edit a Payment</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!payment.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="payment.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="shaktiApp.payment.paymentToken" for="field_paymentToken">Payment Token</label>
+                    <input type="text" class="form-control" name="paymentToken" id="field_paymentToken"
+                        [(ngModel)]="payment.paymentToken" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="shaktiApp.payment.orderID" for="field_orderID">Order ID</label>
+                    <input type="text" class="form-control" name="orderID" id="field_orderID"
+                        [(ngModel)]="payment.orderID" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="shaktiApp.payment.payerID" for="field_payerID">Payer ID</label>
+                    <input type="text" class="form-control" name="payerID" id="field_payerID"
+                        [(ngModel)]="payment.payerID" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="shaktiApp.payment.paymentID" for="field_paymentID">Payment ID</label>
+                    <input type="text" class="form-control" name="paymentID" id="field_paymentID"
+                        [(ngModel)]="payment.paymentID" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="shaktiApp.payment.relId" for="field_relId">Rel Id</label>
+                    <input type="number" class="form-control" name="relId" id="field_relId"
+                        [(ngModel)]="payment.relId" />
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

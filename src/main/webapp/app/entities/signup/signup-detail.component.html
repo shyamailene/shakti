@@ -1,0 +1,87 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="signup">
+            <h2><span jhiTranslate="shaktiApp.signup.detail.title">Signup</span> {{signup.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="shaktiApp.signup.firstName">First Name</span></dt>
+                <dd>
+                    <span>{{signup.firstName}}</span>
+                </dd>
+                <dt><span jhiTranslate="shaktiApp.signup.lastName">Last Name</span></dt>
+                <dd>
+                    <span>{{signup.lastName}}</span>
+                </dd>
+                <dt><span jhiTranslate="shaktiApp.signup.email">Email</span></dt>
+                <dd>
+                    <span>{{signup.email}}</span>
+                </dd>
+                <dt><span jhiTranslate="shaktiApp.signup.phone">Phone</span></dt>
+                <dd>
+                    <span>{{signup.phone}}</span>
+                </dd>
+                <dt><span jhiTranslate="shaktiApp.signup.line1">Line 1</span></dt>
+                <dd>
+                    <span>{{signup.line1}}</span>
+                </dd>
+                <dt><span jhiTranslate="shaktiApp.signup.line2">Line 2</span></dt>
+                <dd>
+                    <span>{{signup.line2}}</span>
+                </dd>
+                <dt><span jhiTranslate="shaktiApp.signup.city">City</span></dt>
+                <dd>
+                    <span>{{signup.city}}</span>
+                </dd>
+                <dt><span jhiTranslate="shaktiApp.signup.state">State</span></dt>
+                <dd>
+                    <span>{{signup.state}}</span>
+                </dd>
+                <dt><span jhiTranslate="shaktiApp.signup.country">Country</span></dt>
+                <dd>
+                    <span>{{signup.country}}</span>
+                </dd>
+                <dt><span jhiTranslate="shaktiApp.signup.zipcode">Zipcode</span></dt>
+                <dd>
+                    <span>{{signup.zipcode}}</span>
+                </dd>
+                <dt><span jhiTranslate="shaktiApp.signup.parentFName">Parent F Name</span></dt>
+                <dd>
+                    <span>{{signup.parentFName}}</span>
+                </dd>
+                <dt><span jhiTranslate="shaktiApp.signup.parentLName">Parent L Name</span></dt>
+                <dd>
+                    <span>{{signup.parentLName}}</span>
+                </dd>
+                <dt><span jhiTranslate="shaktiApp.signup.parentEmail">Parent Email</span></dt>
+                <dd>
+                    <span>{{signup.parentEmail}}</span>
+                </dd>
+                <dt><span jhiTranslate="shaktiApp.signup.parentPhone">Parent Phone</span></dt>
+                <dd>
+                    <span>{{signup.parentPhone}}</span>
+                </dd>
+                <dt><span jhiTranslate="shaktiApp.signup.school">School</span></dt>
+                <dd>
+                    <span>{{signup.school}}</span>
+                </dd>
+                <dt><span jhiTranslate="shaktiApp.signup.grade">Grade</span></dt>
+                <dd>
+                    <span>{{signup.grade}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/signup', signup.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

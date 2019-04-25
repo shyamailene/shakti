@@ -179,3 +179,30 @@ To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`)
 [Protractor]: https://angular.github.io/protractor/
 [Leaflet]: http://leafletjs.com/
 [DefinitelyTyped]: http://definitelytyped.org/
+
+
+
+
+1) Copied Paper-Kit folder from assets/sass/ folder to content/scss folder
+2) Imported statement copied from paper-kit.scss to vendor.scss
+"herokuAppName": "nameless-refuge-81639"
+
+Procfile:
+web: java $JAVA_OPTS  -jar target/*.war --spring.profiles.active=prod,heroku,no-liquibase --server.port=$PORT 
+
+DNS:
+corrugated-tyrannosaurs-c1spbtiwxn11owfy2hnyq5d9.herokudns.com
+
+Test Credit card details
+shyamailene/angular5
+
+Card Type: Visa
+
+Card Number: 4150330348525412
+
+Expiration Date: 02/2020
+
+CVV: 458
+
+command for ui build: yarn build 
+command for ui start: yarn start

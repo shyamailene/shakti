@@ -94,7 +94,7 @@ export class RangoliComponent implements OnInit {
   finalAmount: number = 20;
 
   paypalConfig = {
-    env: 'production',
+    env: 'sandbox',
     client: {
       sandbox: 'AVyA0UcLK7XcagDmryU_IX0QqMv2ze6cJkoycuYz8mAfqLUHmgEHo0_kYrDznNwAbxC58HK86XgRBk4L',
       production: 'AVWTAaiuFd9jz2Zc-6Eot9hQnyj1nwfi1b89nKx2c6P0yKkbbjhfk9VZI1eKmCQIUM1xJbKIJM05euUj'
