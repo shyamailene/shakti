@@ -73,13 +73,13 @@ export class FundraiserComponent implements OnInit {
 		console.log('result id'+ result.id);
 		console.log('result id'+ JSON.stringify(result));
 		this.fundraiser = result;
-    this.isSaving = false;
-    //this.activeModal.dismiss(result);
-		//this.payment.fundraiser=this.fundraiser;
-		//delete this.payment["intent"];
-		//delete this.payment["returnUrl"];
-		//console.log(this.payment);
-		//this.subscribeToSavePayment(this._data.savePayment(this.payment));		
+		this.isSaving = false;
+		//this.activeModal.dismiss(result);
+		this.payment.fundraiser=this.fundraiser;
+		delete this.payment["intent"];
+		delete this.payment["returnUrl"];
+		console.log(this.payment);
+		this.subscribeToSavePayment(this._data.savePayment(this.payment));		
     }
 
     private onSaveError() {
@@ -130,8 +130,8 @@ export class FundraiserComponent implements OnInit {
   ngAfterViewChecked(): void {
     if (!this.addScript) {
       this.addPaypalScript().then(() => {
-        //paypal.Button.render(this.paypalConfig, '#paypal-checkout-btn');
-        //this.paypalLoad = false;
+        paypal.Button.render(this.paypalConfig, '#paypal-checkout-btn');
+        this.paypalLoad = false;
       })
     }
   }

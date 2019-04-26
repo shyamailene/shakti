@@ -78,11 +78,15 @@
 								</div>
 							</div>
 							<alert></alert>
+							<h2 *ngIf="paypalLoad">Paypal button is loading</h2>
+							<div id="paypal-checkout-btn"> Please pay the amount($20) for Registration.</div>
+<!--
 							<div class="row">
 								<div class="col-md-4 mr-auto ml-auto">
 									<button class="btn btn-danger btn-lg btn-fill" (click)="insert()">Register</button>
 								</div>
 							</div>
+-->							
 						</div>
 				</div>
 			</div>

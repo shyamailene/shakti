@@ -137,5 +137,6 @@
         "idexists": "A new {{ entityName }} cannot already have an ID",
         "idnull": "Invalid ID"
     },
-    "footer": "This is your footer"
+    "footer": "This is your footer",
+	"shaktiApp": "Shakti-US"
 }

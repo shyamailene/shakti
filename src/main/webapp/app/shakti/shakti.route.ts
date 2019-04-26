@@ -13,18 +13,18 @@ import { FundraiserComponent } from './fundraiser/fundraiser.component';
 import { FundraisersComponent } from './fundraiser/fundraisers.component';
 
 export const shaktiRoute: Routes = [
-	{ path: 'home',             component: HomeComponent },
-    { path: 'ourstory',         component: OurstoryComponent },
-	{ path: 'executive',        component: ExecutiveComponent },	
-	{ path: 'logo',          	component: LogoComponent },
-	{ path: 'events',         	component: EventsComponent },
-	{ path: 'partners',         component: PartnersComponent },
-    { path: 'signup',           component: SignupComponent },
-	{ path: 'rangoli',           component: RangoliComponent },
-	{ path: 'rangolis',           component: RangolisComponent },
-	{ path: 'fundraiser',           component: FundraiserComponent },
-	{ path: 'fundraisers',           component: FundraisersComponent },
-    { path: '', redirectTo: 'home', pathMatch: 'full' }
+	{ path: 'home', component: HomeComponent, data: {pageTitle: 'shaktiApp'} },
+    { path: 'ourstory', component: OurstoryComponent, data: {pageTitle: 'shaktiApp'}  },
+	{ path: 'executive', component: ExecutiveComponent, data: {pageTitle: 'shaktiApp'}  },	
+	{ path: 'logo', component: LogoComponent, data: {pageTitle: 'shaktiApp'}  },
+	{ path: 'events', component: EventsComponent, data: {pageTitle: 'shaktiApp'}  },
+	{ path: 'partners', component: PartnersComponent, data: {pageTitle: 'shaktiApp'}  },
+    { path: 'signup', component: SignupComponent, data: {pageTitle: 'shaktiApp1'}  },
+	{ path: 'rangoli', component: RangoliComponent, data: {pageTitle: 'shaktiApp'}  },
+	{ path: 'rangolis', component: RangolisComponent, data: {pageTitle: 'shaktiApp'}  },
+	{ path: 'fundraiser', component: FundraiserComponent, data: {pageTitle: 'shaktiApp'}  },
+	{ path: 'fundraisers', component: FundraisersComponent, data: {pageTitle: 'shaktiApp'}  },
+    { path: '', redirectTo: 'home', pathMatch: 'full', data: {pageTitle: 'shaktiApp'} }
 
 ];
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { JhiLanguageService } from 'ng-jhipster';
@@ -27,6 +28,7 @@ export class NavbarComponent implements OnInit {
         private principal: Principal,
         private loginModalService: LoginModalService,
         private profileService: ProfileService,
+        public location: Location,
         private router: Router
     ) {
         this.version = VERSION ? 'v' + VERSION : '';
@@ -37,7 +39,8 @@ export class NavbarComponent implements OnInit {
         this.languageHelper.getAll().then(languages => {
             this.languages = languages;
         });
-
+        var titlee = this.location.prepareExternalUrl(this.location.path());
+        console.log('test'+titlee);
         this.profileService.getProfileInfo().then(profileInfo => {
             this.inProduction = profileInfo.inProduction;
             this.swaggerEnabled = profileInfo.swaggerEnabled;
