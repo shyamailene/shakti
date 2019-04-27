@@ -90,7 +90,7 @@ export class FundraiserComponent implements OnInit {
   addScript: boolean = false;
   paypalLoad: boolean = true;
   
-  finalAmount: number = 20;
+  finalAmount: number = 15;
 
   paypalConfig = {
     env: 'production',
